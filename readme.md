@@ -101,8 +101,8 @@ __TODO: Add content__
 ## links 
  * [Minecraft Bedrock Download page](https://www.minecraft.net/en-us/download/server/bedrock)
  	- Downloading viw web UI requires EULA acknowledgement via checkbox. The server can be downloaded directly via download URLs below. Therefore, by-passing the EULA agreement. In the future, an automatic release download may need to be able to agree to the EULA before the URL is allowed and/or a Captcha may be used.
- * [Download Minecraft Bedrock version 1.16.220.01 for linux](https://minecraft.azureedge.net/bin-linux/bedrock-server-1.16.221.01.zip)
- * [Download Minecraft Bedrock version 1.16.220.01 for Windows](https://minecraft.azureedge.net/bin-win/bedrock-server-1.16.221.01.zip)
+ * [Download Minecraft Bedrock version 1.16.220.01 for linux](https://minecraft.azureedge.net/bin-linux/bedrock-server-1.17.34.02.zip)
+ * [Download Minecraft Bedrock version 1.16.220.01 for Windows](https://minecraft.azureedge.net/bin-win/bedrock-server-1.17.34.02.zip)
 
 
 ## tmux scratch
