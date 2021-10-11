@@ -3,4 +3,4 @@
 
 PROJECT_ROOT=${1:-.}
 
-docker build -t wilder/minecraft-bedrock:1.16.220.01 $PROJECT_ROOT
+docker build -t wilder/minecraft-bedrock:1.17.34.02 $PROJECT_ROOT
