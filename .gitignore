@@ -3,6 +3,7 @@
 orig
 mcpe-data
 dev/bedrock-server-*
+dev/minecraft-bedrock*
 
 # Temporarily ignore
 KSDS.README.md

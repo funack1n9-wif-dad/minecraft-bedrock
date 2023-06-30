@@ -5,8 +5,8 @@ __Origin:__ [lomot/minecraft-bedrock](https://registry.hub.docker.com/r/lomot/mi
 
 
 # Version
-MCPE vMC_BR_VERSION
-```wilder/minecraft-bedrock:MC_BR_VERSION```
+MCPE v1.20.1.02
+```wilder/minecraft-bedrock:1.20.1.02```
 
 ## Release Notes
  * Created our own _minecraft-bedrock_ docker project based on _lomot/minecraft-bedrock_; forked the source on (github.com)
@@ -97,8 +97,8 @@ __TODO: Add content__
 ## links 
  * [Minecraft Bedrock Download page](https://www.minecraft.net/en-us/download/server/bedrock)
  	- Downloading viw web UI requires EULA acknowledgement via checkbox. The server can be downloaded directly via download URLs below. Therefore, by-passing the EULA agreement. In the future, an automatic release download may need to be able to agree to the EULA before the URL is allowed and/or a Captcha may be used.
- * [Download Minecraft Bedrock version MC_BR_VERSION for linux](https://minecraft.azureedge.net/bin-linux/bedrock-server-MC_BR_VERSION.zip)
- * [Download Minecraft Bedrock version MC_BR_VERSION for Windows](https://minecraft.azureedge.net/bin-win/bedrock-server-MC_BR_VERSION.zip)
+ * [Download Minecraft Bedrock version 1.20.1.02 for linux](https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.1.02.zip)
+ * [Download Minecraft Bedrock version 1.20.1.02 for Windows](https://minecraft.azureedge.net/bin-win/bedrock-server-1.20.1.02.zip)
 
 
 ## tmux scratch
