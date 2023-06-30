@@ -29,7 +29,7 @@ RUN apk --no-cache add unzip wget && \
 RUN unzip -q /tmp/bedrock.zip -d $SERVER_PATH \
   && mv $SERVER_PATH/permissions.json $DEFAULT_CONFIG_PATH/ \
   && mv $SERVER_PATH/server.properties $DEFAULT_CONFIG_PATH/ \
-  && mv $SERVER_PATH/whitelist.json $DEFAULT_CONFIG_PATH/ \
+  && mv $SERVER_PATH/allowlist.json $DEFAULT_CONFIG_PATH/ \
   && chmod +x $SERVER_PATH/bedrock_server \
   && rm /tmp/bedrock.zip
 
@@ -51,9 +51,9 @@ FROM debian:10-slim as production
 # install packages & config docker
 # pkgs installed on 1st line of apt installs are required, 2nd line pkgs are admin tools, and 3rd line are development tools.
 RUN apt-get update \
-  && apt-get -y install libcurl4 \
-  && apt-get -y install vim procps file htop \
-  && apt-get -y install tree tcpdump sed grep gawk ack \
+  && apt-get -y install \
+  libcurl4 vim procps file htop \
+  tree tcpdump sed grep gawk ack \
   && apt-get -y autoremove \
   && apt-get clean
 
@@ -73,6 +73,12 @@ COPY --from=builder $SERVER_HOME $SERVER_HOME
 COPY profile/container/.bashrc /root/.bashrc
 COPY profile/container/.vimrc /root/.vimrc
 
+# Backup orig configs and Add custom configs
+RUN cp ${DEFAULT_CONFIG_PATH}/server.properties ${DEFAULT_CONFIG_PATH}/orig.server.properties \
+  && cp ${DEFAULT_CONFIG_PATH}/permissions.json ${DEFAULT_CONFIG_PATH}/orig.permissions.json \
+  && cp ${DEFAULT_CONFIG_PATH}/allowlist.json ${DEFAULT_CONFIG_PATH}/orig.allowlist.json
+COPY profile/mcpe/configs/wilder-creative/server.properties ${DEFAULT_CONFIG_PATH}/server.properties
+COPY profile/mcpe/configs/wilder-creative/permissions.json ${DEFAULT_CONFIG_PATH}/permissions.json
 
 WORKDIR ${SERVER_PATH}
 EXPOSE 19132/udp

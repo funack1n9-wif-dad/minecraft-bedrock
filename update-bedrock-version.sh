@@ -10,6 +10,7 @@ export MC_VERSION="${1:-1.20.1.02}"
 cat <<EOF > .do_update_version.sh
 grep --exclude-dir=.git --exclude-dir=images --exclude-dir=doc -rl MC_BR_VERSION "$PROJECT_HOME" | xargs sed -i "s/MC_BR_VERSION/$MC_VERSION/g"
 rm -f "$0"
+echo "Check the Minecraft Bedrock v$MC_VERSION release nots and "dev/minecraft-bedrock__1.20.1.02/bedrock_server_how_to.html" for details regarding backward compatibility when upgrading."
 EOF
 chmod +x .do_update_version.sh
 
