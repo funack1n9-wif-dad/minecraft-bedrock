@@ -8,15 +8,16 @@ FROM alpine:latest as builder
 
 # build config (TODO: Figure out solution to auto-config the server)
 #ARG MCPE_SERVER_CONFIG="wilder-creative"
+ARG CORE_VERSION
 
 # config server
 ENV SERVER_HOME="/mcpe" \
   SERVER_PATH="/mcpe/server" \
   SCRIPT_PATH="/mcpe/script" \
   DEFAULT_CONFIG_PATH="/mcpe/default-config" \
-  DATA_PATH="/data"
-ENV CORE_VERSION="1.17.34.02" \
+  DATA_PATH="/data" \
   IMAGE_VERSION="1"
+#ENV CORE_VERSION=""
 
 # unzip pack and download new server
 RUN apk --no-cache add unzip wget && \
